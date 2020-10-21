@@ -1,0 +1,274 @@
+/* ---------------------- mini reset ----------------------- */
+body{
+    margin: 0;
+    background: #fafafa;
+}
+body,h1,h2,p,a,input{
+    font-family: 'Arvo', sans-serif;
+    text-decoration: none;
+}
+.main.hide{
+    display: none;
+}
+.main{
+    animation: modalfadein 1s;
+}
+
+/* -------------------- landing page ------------------------ */
+.showcase{
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 20px;
+    overflow: hidden;
+    animation: modalfadein 1s;
+}
+
+.showcase h1{
+    font-size: 50px;
+    line-height: 1.2;
+    color: white;
+}
+.showcase a{
+    font-size: 20px;
+    color: white;
+}
+.showcase button{
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: transparent;
+}
+.showcase button:hover{
+    background: #039be5;
+    color: #ECEFF1;
+}
+.showcase.hide{
+    display: none;
+}
+.intro-message{
+    width: 50%;
+}
+.intro-message h1, .intro-message a {
+    color: #f3b606;
+}
+.intro-message, .auth{
+    float: left;
+}
+/* ----------------------- nav styles ---------------------- */
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background: #2098D1;
+    box-shadow: 0 0 6px;
+}
+
+.logo{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    color: #fafafa;
+    cursor: pointer;
+}
+.nav-links {
+    display:flex;
+    justify-content: space-around;
+    width: 35%;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.nav-links li{
+    list-style: none;
+}
+/* ------------------- link styles ---------------------- */
+.link{
+    color: #fafafa;
+    margin-left: 10px;
+    border-bottom: 1px solid #fafafa;
+    padding: 4px;
+    cursor: pointer;
+}
+.link:hover{
+    background: #00BFFF;
+    color: black;
+}
+
+/* ---------------------------- content styles --------------------- */
+.content{
+    margin: 40px 20px 40px 20px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ---------------------------- modal styles --------------------------- */
+.modal{
+    width: 300px;
+    padding: 30px;
+    margin: 100px auto;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ------------------------------ form element styles ------------------------ */
+input{
+    display: block;
+    margin: 8px 0;
+    padding: 8px 2px;
+    border-width: 0 0 2px 0;
+    width: 100%;
+}
+button{
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: #00bfff 1px solid;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    background: transparent;
+}
+
+button:hover{
+    color: white;
+    background: #039be5;
+}
+
+/* --------------------------- auth styles ------------------------ */
+.auth a{
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
+.auth .modal{
+    display: none;
+}
+.auth .modal.active{
+    display: block;
+    margin: 10px;
+}
+.forgot-password{
+    display: none;
+}
+.forgot-password.open{
+    display: block;
+}
+
+/* -------------------- profile picture upload ----------------------- */
+.picture-upload{
+    padding-top: 25px;
+}
+#uploader{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25%;
+    margin-bottom: 10px;
+}
+
+#fileButton{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.picture-upload label{
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #00bfff;
+    border: 0;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+}
+/* ---------------------------------- loader ------------------------------------- */
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    display: block;
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+.spinner.false{
+    display: none;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    } 50% {
+          transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+          -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+      } 100% {
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        }
+}
+
+/* -------------------------------- snackbar ------------------------------------- */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar-container{
+    position :  fixed;
+    bottom : 0;
+    left : 50%;
+}
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    margin-bottom : 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+.snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

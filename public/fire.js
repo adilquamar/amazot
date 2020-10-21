@@ -10,7 +10,6 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 // firebase services references
 const db = firebase.firestore(); // cloud firestore
