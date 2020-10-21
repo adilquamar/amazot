@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Antz</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <body>
+
+  <header class="showcase">
+    <div class="intro-message">
+      <h1>Welcome to Antz - Study Groups made Simple</h1>
+      <a>For UCI students by UCI students.</a><br>
+      <a>Create an account or login to access study groups</a>
+    </div>
+
+    <!-- Sign in authentication -->
+    <div class="auth">
+      <div class="modal active">
+        <h2>Login</h2>
+        <form class="login-regular">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <button>Login</button>
+          <p class="error"></p>
+        </form>
+        <div><br>No account? <a class="switch">Register instead</a></div>
+        <a class="forgot-password">Forgot password?</a>
+      </div>
+
+      <div class="modal">
+        <h2>Register</h2>
+        <form class="register">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <input type="text" name="displayName" placeholder="Full Name">
+          <button>Register</button>
+          <p class="error"></p>
+        </form>
+        <div>Got an account? <a class="switch">Login instead</a></div>
+      </div>
+
+      <div class="modal">
+        <h2>Reset Password</h2>
+        <form class="pwd-reset">
+          <input type="text" name="email" placeholder="Enter email address...">
+          <button>Send Reset Email</button>
+          <p class="error"></p>
+        </form>
+      </div>
+
+    </div>
+
+  </header>
+
+  <div class="main">
+
+    <!-- add classes modal -->
+    <div class="new-class">
+      <div class="modal">
+        <h2>Add Class Codes</h2>
+        <form>
+          <input type="text" name="request" placeholder="Example: 35410">
+          <button>Submit Request</button>
+          <p class="error"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- view profile modal -->
+    <div class="view-profile">
+      <div class="modal">
+        <h2>Profile Info</h2>
+        <div class="profile-details"></div><br>
+        <button class="view-edit-profile">Edit Profile</button>
+      </div>
+    </div>
+
+    <!-- edit profile page -->
+    <div class="edit-prof">
+      <div class="modal" id="edit">
+        <h2>Edit Profile</h2>
+        <div class="spinner false"></div>
+        <div class="profile-loader open">
+          <form>
+            <input type="text" name="name" placeholder="Full Name">
+            <input type="number" name="phoneNumber" placeholder="Phone Number">
+            <input type="text" name="snapchat" placeholder="Snapchat Username">
+            <button>Submit Changes</button>
+          </form>
+          <div class="picture-upload">
+            <progress value="0" max="100" id="uploader">0%</progress>
+            <input type="file" value="upload" id="fileButton" accept="image/jpeg"/>
+            <label for="fileButton">Choose a profile picture</label>
+            <span id="fileText">No File Chosen</span>
+          </div>
+          <div class="cancel">
+            <button>Cancel</button>
+          </div>
+          <div class="delete-profile">
+            <br><a id="delete-profile" class="link">Delete Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- class members modal -->
+    <div class="view-members">
+      <div class="modal">
+        <h2>Members</h2>
+        <div class="members" id="members-list"></div> <!-- dynamically created elements go in this div -->
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+      <nav>
+        <div class="logo">
+          <h4>Antz - Study Groups made Simple</h4>
+        </div>
+        <ul class="nav-links">
+          <li><a class="profile link">profile</a></li>
+          <li><a class="add-class link">add classes</a></li>
+          <li><a class="sign-out link">sign out</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="content">
+
+    </section>
+
+  </div>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.24.0/firebase-functions.js"></script>
+  <script src="/__/firebase/7.24.0/firebase-storage.js"></script>
+  <script src="/__/firebase/7.24.0/firebase-database.js"></script>
+  <script src="/__/firebase/7.24.0/firebase-messaging.js"></script>
+  <script src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+
+
+  <!-- Importing Javascript Files -->
+  <script src="fire.js"></script>
+  <script src="js/slack.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/fileUpload.js"></script>
+  <script src="js/friends.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/messaging.js"></script>
+
+  </body>
+</html>
