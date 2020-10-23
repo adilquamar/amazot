@@ -51,9 +51,7 @@
           <p class="error"></p>
         </form>
       </div>
-
     </div>
-
   </header>
 
   <div class="main">
@@ -62,17 +60,153 @@
     <header>
       <nav>
         <div class="logo">
-          <h4>Antz - Study Groups made Simple</h4>
+          <h4>Amazot - Marketplace for UCI</h4>
         </div>
         <ul class="nav-links">
-          <li><a class="profile link">link1</a></li>
-          <li><a class="add-class link">link2</a></li>
+          <li><a class="profile link">view profile</a></li>
+          <li><a class="sell-product link">sell products</a></li>
           <li><a class="sign-out link">sign out</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- sidebar -->
+    <div class="sidenav">
+      <a class="link books">Textbooks</a>
+      <a class="link iclicker">iClickers</a>
+      <a class="link furniture">Furniture</a>
+      <a class="link mealSwipes">Meal Swipes</a>
+      <a class="link merch">Merch</a>
+      <a class="link notes">Notes</a>
+      <a class="link sublease">Sublease</a>
+    </div>
+
+    <!-- sell product modal -->
+    <div class="sellProduct">
+      <div class="modal" id="sell">
+        <h2>Sell Product</h2>
+
+        <div id="product-list">
+          <a id="books">Textbooks</a>
+          <a id="iclicker">iClickers</a>
+          <a id="furniture">Furniture</a>
+          <a id="mealSwipes">Meal Swipes</a>
+          <a id="merch">Merch</a>
+          <a id="notes">Notes</a>
+          <a id="sublease">Sublease</a>
+        </div>
+
+        <form>
+          <input type="text" name="description" placeholder="Description...">
+          <input type="text" name="price" placeholder="Cost of Product...">
+          <input type="text" name="contact" placeholder="Contact information...">
+          <button>Submit Product</button>
+        </form>
+
+        <div class="picture-upload">
+          <progress value="0" max="100" id="uploader">0%</progress>
+          <input type="file" value="upload" id="fileButton" accept="image/jpeg"/>
+          <label for="fileButton">Choose a product picture</label>
+          <span id="fileText">No File Chosen</span>
+        </div>
+        <div class="cancel">
+          <button>Cancel</button>
+        </div>
+
+        <!-- snackbar -->
+        <div id="snackbar-container"></div>
+
+      </div>
+    </div>
+
     <section class="content">
+      <div class="products">
+        <div class="display-books"></div>
+        <div class="display-iclicker display">
+
+          <div class="product" id="iclicker12">
+            <div class="description">
+              <a>Description: slightly used iclicker... latest model</a>
+            </div>
+            <div class="image">
+              <img src="images/notes.png" alt="notes default picture">
+            </div>
+            <div class="price">
+              <a>Price: $15</a>
+            </div>
+            <div class="contact">
+              <a>Contact: aquamar@uci.edu</a>
+            </div>
+          </div>
+
+          <div class="product" id="iclicker34">
+            <div class="description">
+              <a>Description: slightly used iclicker... latest model</a>
+            </div>
+            <div class="image">
+              <img src="images/notes.png" alt="notes default picture">
+            </div>
+            <div class="price">
+              <a>Price: $15</a>
+            </div>
+            <div class="contact">
+              <a>Contact: aquamar@uci.edu</a>
+            </div>
+          </div>
+
+          <div class="product" id="iclicker56">
+            <div class="description">
+              <a>Description: slightly used iclicker... latest model</a>
+            </div>
+            <div class="image">
+              <img src="images/notes.png" alt="notes default picture">
+            </div>
+            <div class="price">
+              <a>Price: $15</a>
+            </div>
+            <div class="contact">
+              <a>Contact: aquamar@uci.edu</a>
+            </div>
+          </div>
+
+          <div class="product" id="iclicker78">
+            <div class="description">
+              <a>Description: slightly used iclicker... latest model. </a>
+            </div>
+            <div class="image">
+              <img src="images/notes.png" alt="notes default picture">
+            </div>
+            <div class="price">
+              <a>Price: $15</a>
+            </div>
+            <div class="contact">
+              <a>Contact: aquamar@uci.edu</a>
+            </div>
+          </div>
+
+          <div class="product" id="iclicker910">
+            <div class="description">
+              <a>Description: slightly used iclicker... latest model</a>
+            </div>
+            <div class="image">
+              <img src="images/notes.png" alt="notes default picture">
+            </div>
+            <div class="price">
+              <a>Price: $15</a>
+            </div>
+            <div class="contact">
+              <a>Contact: aquamar@uci.edu</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="display-furniture display"></div>
+        <div class="display-mealSwipes display"></div>
+        <div class="display-merch display"></div>
+        <div class="display-notes display"></div>
+        <div class="display-sublease display"></div>
+      </div>
 
     </section>
 
@@ -93,7 +227,8 @@
   <script src="fire.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/app.js"></script>
-
+  <script src="js/sell.js"></script>
+  <script src="js/products.js"></script>
 
   </body>
 </html>

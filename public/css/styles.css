@@ -119,6 +119,14 @@ nav{
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
     text-align: center;
 }
+@-webkit-keyframes modalfadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes modalfadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 /* ------------------------------ form element styles ------------------------ */
 input{
@@ -192,38 +200,6 @@ button:hover{
     font-family: inherit;
     cursor: pointer;
 }
-/* ---------------------------------- loader ------------------------------------- */
-.spinner {
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    display: block;
-    margin: 100px auto;
-    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-    animation: sk-rotateplane 1.2s infinite ease-in-out;
-}
-.spinner.false{
-    display: none;
-}
-
-@-webkit-keyframes sk-rotateplane {
-    0% { -webkit-transform: perspective(120px) }
-    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
-}
-
-@keyframes sk-rotateplane {
-    0% {
-        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-    } 50% {
-          transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-          -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-      } 100% {
-            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-            -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-        }
-}
 
 /* -------------------------------- snackbar ------------------------------------- */
 /* The snackbar - position it at the bottom and in the middle of the screen */
@@ -271,4 +247,105 @@ button:hover{
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
+}
+
+/* -------------------------------------- sidebar ------------------------------------------------- */
+.sidenav {
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 76px;
+    left: 0;
+    background-color: #2098D1;
+    overflow-x: hidden;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 40px 20px 40px 20px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* ---------------------------------------- sell product ------------------------------------------------ */
+.sellProduct.open{
+    display: block;
+    animation: modalfadein 0.3s;
+}
+.sellProduct{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #fafafa;
+    display: none;
+    z-index: 1;
+    text-align: center;
+}
+#sell{
+    width: 800px;
+}
+.cancel{
+    padding-top: 25px;
+}
+#product-list {
+    display: flex;
+    border-radius: 12px;
+    justify-content: center;
+    background-color: #333333;
+}
+
+#product-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+#product-list a:hover {
+    background-color: #111111;
+    cursor: pointer;
+}
+
+/* --------------------------------- main content --------------------------- */
+.display-books, .display-furniture, .display-iclicker, .display-mealSwipes, .display-merch, .display-notes, .display-sublease {
+    display: none;
+}
+
+.display-books.open, .display-furniture.open, .display-iclicker.open, .display-mealSwipes.open, .display-merch.open, .display-notes.open, .display-sublease.open {
+    display: block;
+}
+
+.product{
+    text-align: center;
+    margin: 30px;
+    border: #3F0F3F 1px solid;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.description, .price, .contact{
+    margin: 20px;
+}
+.products{
+    overflow-y: hidden;
+}
+.display{
+    overflow-y: auto;
+    height: 80vh;
+}
+img{
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+    border-radius: 20px;
 }
