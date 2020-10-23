@@ -32,8 +32,10 @@ sellForm.addEventListener('submit', e => {
             price: price,
             contact: contact
         }).then(() => {
+
             sellForm.reset();
             sellModal.classList.remove('open');
+
         })
     } else {
         addSnackbar("Need to select a product before submitting...");

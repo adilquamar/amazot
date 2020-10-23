@@ -9,3 +9,6 @@ function addSnackbar(message){
     setTimeout(function ()
     {el.className = el.className.replace("snackbar show", "snackbar");}, 3000)
 }
+function getUserName(){
+    return firebase.auth().currentUser.displayName;
+}

@@ -330,7 +330,7 @@ button:hover{
 .products-container{
     overflow-y: hidden;
 }
-.display{
+.products{
     overflow-y: auto;
     height: 80vh;
 }
