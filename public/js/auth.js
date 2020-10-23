@@ -35,19 +35,14 @@ registerForm.addEventListener('submit', (e) => {
     const email = registerForm.email.value;
     const password = registerForm.password.value;
     const displayName = registerForm.displayName.value;
-    const photoRef = storage.ref('userProfilePics/defaultProfPic.jpg');
 
     if (email.endsWith("@uci.edu")){
         firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(result => {
-                photoRef.getDownloadURL().then(url => {
-                    // creating auth user fields
-                    return result.user.updateProfile({
-                        displayName: displayName,
-                        photoURL: url
-                    });
-                });
                 registerForm.reset();
+                return result.user.updateProfile({
+                    displayName: displayName
+                });
             })
             .catch((error) => {
                 registerForm.querySelector('.error').textContent = error.message;
