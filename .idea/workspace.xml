@@ -10,20 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="181db1cd-b0cb-431e-aa49-ba214b252bfa" name="Default Changelist" comment="basic html is set up">
-      <change afterPath="$PROJECT_DIR$/public/images/books.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/furniture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/mealSwipes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/merch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/notes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/sublease.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/sell.js" afterDir="false" />
+    <list default="true" id="181db1cd-b0cb-431e-aa49-ba214b252bfa" name="Default Changelist" comment="reading from database">
+      <change afterPath="$PROJECT_DIR$/public/images/iclicker.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firestore.rules" beforeDir="false" afterPath="$PROJECT_DIR$/firestore.rules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/products.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +56,7 @@
       <workItem from="1603253238552" duration="3821000" />
       <workItem from="1603390617434" duration="7912000" />
       <workItem from="1603407671067" duration="5086000" />
-      <workItem from="1603425715378" duration="365000" />
+      <workItem from="1603425715378" duration="1824000" />
     </task>
     <task id="LOCAL-00001" summary="basic html is set up">
       <created>1603255610923</created>
@@ -73,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603255610923</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reading from database">
+      <created>1603426145505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603426145505</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,7 +93,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="basic html is set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic html is set up" />
+    <MESSAGE value="reading from database" />
+    <option name="LAST_COMMIT_MESSAGE" value="reading from database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2812" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603254617809">
@@ -105,10 +105,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="278" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603390648091" />
-    <state x="2638" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603255612804">
+    <state x="2638" y="256" key="Vcs.Push.Dialog.v2" timestamp="1603426148963">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2638" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603255612804" />
+    <state x="2638" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603426148963" />
     <state x="2863" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603255512872">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

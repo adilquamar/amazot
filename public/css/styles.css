@@ -317,14 +317,6 @@ button:hover{
 }
 
 /* --------------------------------- main content --------------------------- */
-.display-books, .display-furniture, .display-iclicker, .display-mealSwipes, .display-merch, .display-notes, .display-sublease {
-    display: none;
-}
-
-.display-books.open, .display-furniture.open, .display-iclicker.open, .display-mealSwipes.open, .display-merch.open, .display-notes.open, .display-sublease.open {
-    display: block;
-}
-
 .product{
     text-align: center;
     margin: 30px;
@@ -335,7 +327,7 @@ button:hover{
 .description, .price, .contact{
     margin: 20px;
 }
-.products{
+.products-container{
     overflow-y: hidden;
 }
 .display{
@@ -344,8 +336,8 @@ button:hover{
 }
 img{
     background-repeat: no-repeat;
-    width: 60px;
-    height: 60px;
+    max-width: 120px;
+    max-height: 120px;
     background-size: 30px;
     border-radius: 20px;
 }
