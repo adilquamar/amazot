@@ -105,9 +105,13 @@ passwordResetForm.addEventListener('submit', e => {
 firebase.auth().onAuthStateChanged((user) => {
     if (user){
         // toggle UI elements
+        prodList.innerHTML = "";
         landing.classList.add("hide"); // showing landing page
         main.classList.remove('hide');
         authModals.forEach(modal => modal.classList.remove('active'));
+
+        // load content
+        showAllProducts();
 
     } else{
         main.classList.add('hide');

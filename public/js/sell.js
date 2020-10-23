@@ -5,6 +5,8 @@ const productList = document.getElementById('product-list');
 const sellForm = document.querySelector('.sellProduct form')
 
 let SELECTED_PRODUCT = "";
+const PRODUCTS = {"books": "Textbooks", "iclicker": "iClicker", "furniture": "Furniture", "mealSwipes": "Meal Swipes",
+                    "merch": "Merch", "notes": "Notes", "sublease": "Sublease"};
 
 sellLink.addEventListener('click', () => {
     sellModal.classList.add('open');
@@ -15,8 +17,8 @@ cancelSell.addEventListener('click', e => {
 });
 
 productList.addEventListener('click', e => {
-    console.log(e.target.id);
     SELECTED_PRODUCT = e.target.id;
+    addSnackbar(`Selected: ${PRODUCTS[SELECTED_PRODUCT]}`);
 });
 
 sellForm.addEventListener('submit', e => {
@@ -32,11 +34,9 @@ sellForm.addEventListener('submit', e => {
             price: price,
             contact: contact
         }).then(() => {
-
             sellForm.reset();
             sellModal.classList.remove('open');
-
-        })
+        });
     } else {
         addSnackbar("Need to select a product before submitting...");
     }
